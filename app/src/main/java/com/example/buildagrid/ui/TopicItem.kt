@@ -34,7 +34,7 @@ fun TopicItem(
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth(),          // ✅ padding 16 thay vì 8
+                .fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
@@ -80,12 +80,8 @@ fun TopicItem(
 fun TopicItemPreview() {
     BuildAGridTheme {
         TopicItem(
-            topic = Topic(
-                title = R.string.architecture,
-                courseCount = 58,
-                imageRes = R.drawable.architecture
-            ),
-            modifier = Modifier.padding(16.dp)
+            topic = Topic(R.string.architecture, 58, R.drawable.architecture),
+            modifier = Modifier.width(180.dp)   // ép rộng giống 1 cell của grid
         )
     }
 }
